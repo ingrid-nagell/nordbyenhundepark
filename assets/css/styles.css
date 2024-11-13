@@ -13,3 +13,9 @@
     left: 10%;
     transform: translateY(-50%);
   }
+
+
+  .google-map {
+    height: 50vh;
+    width: 100%;
+  }

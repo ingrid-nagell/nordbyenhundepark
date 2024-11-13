@@ -3,77 +3,21 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-
     <title>Nordbyen hundepark</title>
     <link rel="stylesheet" type="text/css" href="./styles.css" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <!-- Style in stylesheet does not work... -->
-    <!-- <style>
-    .banner {
-            position: relative;
-            background-image: url('./assets/images/dogs.jpg');
-            background-size: cover;
-            background-position: top;
-            height: 60vh;
-            color: white;
-    }
-
-    .text-overlay {
-    position: absolute;
-    top: 50%;
-    left: 10%;
-    transform: translateY(-50%);
-    }
-
-    .google-map {
-        position: relative;
-        padding-bottom: 56.25%; /* 16:9 aspect ratio */
-        height: 60vh;
-        overflow: hidden;
-    }
-
-    .google-map iframe {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        border: 0;
-    }
-    </style> -->
   </head>
 
   <body>
     <header>
-      <!-- Navbar -->
-      <nav class="navbar navbar-expand-lg bg-body-tertiary">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="#">Nordbyen hundepark</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ms-auto">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="index.html">Hjem</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Regler</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Nyheter</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link disabled" aria-disabled="true">Booking</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Om parken</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
+      <div id="navbar"></div>
+      <script>
+          fetch('./templates/navbar.html')
+              .then(response => response.text())
+              .then(data => {
+                  document.getElementById('navbar').innerHTML = data;
+              });
+      </script>
     </header>
 
     <main>
@@ -86,7 +30,7 @@
         </div>
       </div>
 
-      <!-- Container -->
+      <!-- Om -->
       <div class="container px-4 py-5">
         <div class="row">
           <div class="col-md-12">
@@ -161,19 +105,16 @@
           </div>
       </div>
     </main>
-  </body>
+
 
   <!-- Footer -->
-  <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
-    <div class="col-md-2 d-flex align-items-start">
-      <span class="mb-2 mb-md-0 text-body-secondary ms-3">© <script>document.write(new Date().getFullYear());</script> Nordbyen hundepark</span>
-    </div>
-
-    <div class="col-md-1 d-flex align-it</ul>ems-end">
-      <ul class="nav col-md-1 justify-content-start list-unstyled d-flex">
-        <li class="ms-3"><a class="text-body-secondary" href="#"><img src="./assets/icons/facebook.svg" class="bi" width="24" height="24" alt="Facebook"></a></li>
-      </ul>
-    </div>
-  </footer>
+  <div id="footer"></div>
+  <script>
+      fetch('./templates/footer.html')
+          .then(response => response.text())
+          .then(data => {
+              document.getElementById('footer').innerHTML = data;
+          });
+  </script>
 
 </html>

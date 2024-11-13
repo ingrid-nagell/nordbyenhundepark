@@ -1,0 +1,15 @@
+.background-image {
+    position: relative;
+    background-image: url('/assets/images/dalmatian_jumping.jpg');
+    background-size: cover;
+    background-position: top;
+    height: 60vh;
+    color: white;
+  }
+
+.text-overlay {
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    transform: translateY(-50%);
+  }

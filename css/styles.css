@@ -17,7 +17,7 @@
 .google-map {
     position: relative;
     padding-bottom: 56.25%; /* 16:9 aspect ratio */
-    height: 0;
+    height: 60vh;
     overflow: hidden;
 }
 

@@ -6,8 +6,9 @@
 
 
     <title>Nordbyen hundepark</title>
-<!--     <link rel="stylesheet" type="text/css" href="/css/styles.css" /> -->
+<!--     <link rel="stylesheet" type="text/css" href="./css/styles.css" /> -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!-- Style in stylesheet does not work... -->
     <style>
     .banner {
             position: relative;
@@ -16,6 +17,29 @@
             background-position: top;
             height: 60vh;
             color: white;
+    }
+
+    .text-overlay {
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    transform: translateY(-50%);
+    }
+
+    .google-map {
+        position: relative;
+        padding-bottom: 56.25%; /* 16:9 aspect ratio */
+        height: 60vh;
+        overflow: hidden;
+    }
+
+    .google-map iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border: 0;
     }
     </style>
   </head>

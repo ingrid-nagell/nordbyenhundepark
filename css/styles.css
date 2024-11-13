@@ -1,6 +1,5 @@
 .background-image {
     position: relative;
-    background-image: url('/assets/images/dalmatian_jumping.jpg');
     background-image: url('./assets/images/dalmatian_jumping.jpg');
     background-size: cover;
     background-position: top;
@@ -16,6 +15,7 @@
   }
 
 .google-map {
+    position: relative;
     height: 50vh;
     width: 100%;
   }

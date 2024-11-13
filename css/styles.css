@@ -14,8 +14,7 @@
     transform: translateY(-50%);
   }
 
-
-  .google-map {
+.google-map {
     height: 50vh;
     width: 100%;
   }

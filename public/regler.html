@@ -3,12 +3,11 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <base href="/nordbyenhundepark/">
 
     <title>Nordbyen hundepark</title>
 
     <!-- Styling -->
-    <link rel="stylesheet" type="text/css" href="./styles.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/styles.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
   </head>
 
@@ -16,7 +15,7 @@
     <header>
         <div id="navbar"></div>
         <script>
-            fetch('./templates/navbar.html')
+            fetch('/templates/navbar.html')
                 .then(response => response.text())
                 .then(data => {
                     document.getElementById('navbar').innerHTML = data;
@@ -27,7 +26,7 @@
     <main>
 
         <div class="container px-4 py-5">
-            <div class="col-md-12">
+            <div class="col-md-12 pt-5">
                 <h2 class="pb-2 border-bottom">Hundeparkens ordensregler</h2>
                 <p>
                     For å sikre en god opplevelse for alle brukere av Nordbyen hundepark, ber vi om at alle følger disse
@@ -49,7 +48,7 @@
     <!-- Footer -->
     <div id="footer"></div>
     <script>
-        fetch('./templates/footer.html')
+        fetch('/templates/footer.html')
             .then(response => response.text())
             .then(data => {
                 document.getElementById('footer').innerHTML = data;

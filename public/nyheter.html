@@ -3,12 +3,11 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <base href="/nordbyenhundepark/">
 
     <title>Nordbyen hundepark</title>
 
     <!-- Styling -->
-    <link rel="stylesheet" type="text/css" href="./styles.css" />
+    <link rel="stylesheet" type="text/css" href="../styles.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
   </head>
 
@@ -16,7 +15,7 @@
     <header>
       <div id="navbar"></div>
       <script>
-          fetch('./templates/navbar.html')
+          fetch('../templates/navbar.html')
               .then(response => response.text())
               .then(data => {
                   document.getElementById('navbar').innerHTML = data;
@@ -25,15 +24,46 @@
     </header>
 
     <main>
+      <div class="container px-4 py-5">
+        <div class="row pt-5">
+          <div class="col-md-9">
+            <h2 class="pb-2 border-bottom">Nyheter</h2>
+          </div>
+          <div class="col-md-2">
+            <button class="btn btn-primary ml-5" type="button" onclick="window.location.href='/public/opprett-innlegg.html'">Opprett nytt innlegg</button>
+          </div>
+        </div>
+      </div>
+
       <div class="container marketing">
 
         <!-- Innlegg -->
+        <div class="row featurette">
+          <div class="col-md-7">
+            <h3 class="featurette-heading fw-normal lh-1">Kom med innspill til våre ordensregler</h3>
+            <p class="lead">
+              More placeholder content here to give you an idea of how this layout would work with some actual real-world content in place.
+            </p>
+            <p>
+              More placeholder content here to give you an idea of how this layout would work with some actual real-world content in place.
+              More placeholder content here to give you an idea of how this layout would work with some actual real-world content in place.
+            <p>
+              More placeholder content here to give you an idea of how this layout would work with some actual real-world content in place.
+              More placeholder content here to give you an idea of how this layout would work with some actual real-world content in place.
+              More placeholder content here to give you an idea of how this layout would work with some actual real-world content in place.
+            </p>
+          </div>
+          <div class="col-md-5">
+            <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="var(--bs-secondary-bg)"></rect><text x="50%" y="50%" fill="var(--bs-secondary-color)" dy=".3em">500x500</text></svg>
+          </div>
+        </div>
+
         <hr class="featurette-divider">
 
         <div class="row featurette">
           <div class="col-md-7">
-            <h2 class="featurette-heading fw-normal lh-1">Kom med innspill til våre ordensregler</h2>
-            <p class="lead">
+            <h3 class="featurette-heading fw-normal lh-1">Åpning av Nordbyen hundepark</h3>
+            <p>
               More placeholder content here to give you an idea of how this layout would work with some actual real-world content in place.
               More placeholder content here to give you an idea of how this layout would work with some actual real-world content in place.
               More placeholder content here to give you an idea of how this layout would work with some actual real-world content in place.
@@ -51,30 +81,11 @@
 
         <div class="row featurette">
           <div class="col-md-7">
-            <h2 class="featurette-heading fw-normal lh-1">Åpning av Nordbyen hundepark</h2>
-            <p class="lead">
-              More placeholder content here to give you an idea of how this layout would work with some actual real-world content in place.
-              More placeholder content here to give you an idea of how this layout would work with some actual real-world content in place.
-              More placeholder content here to give you an idea of how this layout would work with some actual real-world content in place.
-              More placeholder content here to give you an idea of how this layout would work with some actual real-world content in place.
-              More placeholder content here to give you an idea of how this layout would work with some actual real-world content in place.
-              More placeholder content here to give you an idea of how this layout would work with some actual real-world content in place.
-            </p>
-          </div>
-          <div class="col-md-5">
-            <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="var(--bs-secondary-bg)"></rect><text x="50%" y="50%" fill="var(--bs-secondary-color)" dy=".3em">500x500</text></svg>
-          </div>
-        </div>
-
-        <hr class="featurette-divider">
-
-        <div class="row featurette">
-          <div class="col-md-7">
-            <h2 class="featurette-heading fw-normal lh-1">Velkommen til Nordbyen Hundeparks hjemmeside</h2>
-            <p class="lead">
+            <h3 class="featurette-heading fw-normal lh-1">Velkommen til Nordbyen Hundeparks hjemmeside</h3>
+            <p>
               Endelig har Molde fått sin egen hundepark. Vi er også å finne på Facebook: <a href="#">Nordbyen hundepark</a>
               Det jobbes med å sette opp påler og gjerde i Jensgurilia.
-              Les mer og finn oss <a href="/nordbyenhundepark/"></a>
+              Les mer og finn oss <a href="/"></a>
             </p>
           </div>
           <div class="col-md-5">
@@ -92,7 +103,7 @@
     <!-- Footer -->
     <div id="footer"></div>
     <script>
-        fetch('./templates/footer.html')
+        fetch('/../templates/footer.html')
             .then(response => response.text())
             .then(data => {
                 document.getElementById('footer').innerHTML = data;

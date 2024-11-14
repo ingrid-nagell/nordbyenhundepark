@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="no">
   <head>
     <meta charset="utf-8">
@@ -9,50 +9,52 @@
 
     <!-- Styling -->
     <link rel="stylesheet" type="text/css" href="./styles.css" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
   </head>
 
-  <body>
+<body>
     <header>
-      <div id="navbar"></div>
-      <script>
-          fetch('./templates/navbar.html')
-              .then(response => response.text())
-              .then(data => {
-                  document.getElementById('navbar').innerHTML = data;
-              });
-      </script>
+        <div id="navbar"></div>
+        <script>
+            fetch('./templates/navbar.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('navbar').innerHTML = data;
+                });
+        </script>
     </header>
 
     <main>
 
-    <div class="container px-4 py-5">
-        <div class="col-md-12">
-            <h2 class="pb-2 border-bottom">Hundeparkens ordensregler</h2>
-            <p>
-                For å sikre en god opplevelse for alle brukere av Nordbyen hundepark, ber vi om at alle følger disse reglene:
-            </p>
-            <div>
-                <ul>
-                    <li>Parken er stengt mellom kl xx og xx.</li>
-                    <li>Rydd opp etter deg og hunden din.</li>
-                    <li>Vis hensyn.</li>
-                    <li>Hold hunden i bånd ved ankomst og avreise.</li>
-                </ul>
+        <div class="container px-4 py-5">
+            <div class="col-md-12">
+                <h2 class="pb-2 border-bottom">Hundeparkens ordensregler</h2>
+                <p>
+                    For å sikre en god opplevelse for alle brukere av Nordbyen hundepark, ber vi om at alle følger disse
+                    reglene:
+                </p>
+                <div>
+                    <ul>
+                        <li>Parken er stengt mellom kl xx og xx.</li>
+                        <li>Rydd opp etter deg og hunden din.</li>
+                        <li>Vis hensyn.</li>
+                        <li>Hold hunden i bånd ved ankomst og avreise.</li>
+                    </ul>
+                </div>
             </div>
         </div>
-    </div>
 
     </main>
+
+    <!-- Footer -->
+    <div id="footer"></div>
+    <script>
+        fetch('./templates/footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer').innerHTML = data;
+            });
+    </script>
 </body>
 
-  <!-- Footer -->
-  <div id="footer"></div>
-  <script>
-      fetch('./templates/footer.html')
-          .then(response => response.text())
-          .then(data => {
-              document.getElementById('footer').innerHTML = data;
-          });
-  </script>
 </html>

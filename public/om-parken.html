@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <base href="/nordbyenhundepark/">
+    <base href="/nordbyenhundepark">
 
     <title>Nordbyen hundepark</title>
 
@@ -16,7 +16,7 @@
     <header>
       <div id="navbar"></div>
       <script>
-          fetch('/templates/navbar.html')
+          fetch('/nordbyenhundepark/templates/navbar.html')
               .then(response => response.text())
               .then(data => {
                   document.getElementById('navbar').innerHTML = data;
@@ -51,7 +51,7 @@
     <!-- Footer -->
     <div id="footer"></div>
     <script>
-        fetch('/templates/footer.html')
+        fetch('/nordbyenhundepark/templates/footer.html')
             .then(response => response.text())
             .then(data => {
                 document.getElementById('footer').innerHTML = data;
